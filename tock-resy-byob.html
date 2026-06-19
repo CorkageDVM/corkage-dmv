@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tock Is Folding Into Resy This Summer — What It Means for BYOB Diners — Corkage DMV</title>
+<meta name="description" content="American Express is merging Tock into Resy in summer 2026, nearly doubling Resy to 25,000+ venues. Here's what the change means for BYOB diners and the Amex Resy dining credit.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #1a1410; --paper: #f7f3ee; --cream: #ede7dd;
+    --wine: #6b1e3c; --wine-light: #8b2e50; --gold: #c9a84c;
+    --sage: #5a6e52; --mist: #9ca3af; --border: #ddd5c8; --card-bg: #ffffff;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--paper); color: var(--ink); font-size: 15px; line-height: 1.6; }
+
+  nav { position: sticky; top: 0; z-index: 100; background: var(--ink); border-bottom: 1px solid rgba(201,168,76,0.3); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--gold); text-decoration: none; letter-spacing: 0.02em; }
+  .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+  .nav-links a { color: rgba(247,243,238,0.7); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+
+  .hero { background: var(--ink); color: var(--paper); padding: 4.5rem 2rem 3.5rem; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(107,30,60,0.4) 0%, transparent 70%); pointer-events: none; }
+  .hero-eyebrow { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,168,76,0.4); padding: 5px 14px; border-radius: 2px; margin-bottom: 1.5rem; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600; line-height: 1.15; max-width: 820px; margin: 0 auto 1.25rem; letter-spacing: -0.01em; }
+  .hero h1 em { font-style: italic; color: var(--gold); }
+  .hero-sub { font-size: 1.05rem; color: rgba(247,243,238,0.65); max-width: 620px; margin: 0 auto; font-weight: 300; line-height: 1.7; }
+
+  .article { max-width: 760px; margin: 0 auto; padding: 3rem 2rem; }
+  .article h2 { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 600; color: var(--ink); margin: 2.5rem 0 1rem; line-height: 1.25; }
+  .article h2:first-of-type { margin-top: 0; }
+  .article p { margin-bottom: 1.1rem; color: #3a322b; }
+  .article ul { margin: 0 0 1.1rem 1.25rem; }
+  .article li { margin-bottom: 0.5rem; color: #3a322b; }
+  .article strong { color: var(--ink); }
+  .lead { font-size: 1.15rem; line-height: 1.7; color: #4a4038; margin-bottom: 1.75rem; }
+  .byline { font-size: 12px; color: var(--mist); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 2rem; }
+
+  .callout { border: 1px solid var(--border); border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 1.25rem 1.5rem; margin: 1.75rem 0; background: var(--cream); }
+  .callout-label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--wine); margin-bottom: 0.5rem; }
+  .callout p:last-child { margin-bottom: 0; }
+
+  .cta { text-align: center; margin: 3rem auto 0; background: var(--ink); color: var(--paper); border-radius: 8px; padding: 2.5rem 2rem; }
+  .cta h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 0.6rem; color: var(--paper); }
+  .cta p { color: rgba(247,243,238,0.7); margin-bottom: 1.5rem; }
+  .cta-btn { display: inline-block; padding: 12px 28px; background: var(--gold); color: var(--ink); border-radius: 4px; text-decoration: none; font-size: 14px; font-weight: 600; letter-spacing: 0.03em; transition: opacity 0.2s; }
+  .cta-btn:hover { opacity: 0.9; }
+
+  .meta-block { max-width: 760px; margin: 2.5rem auto 0; padding: 0 2rem; }
+  .disclaimer { border: 1px solid var(--border); border-radius: 6px; padding: 1rem 1.25rem; background: #fff; font-size: 12px; color: #6a6258; line-height: 1.6; }
+  .disclaimer strong { color: var(--ink); }
+  .sources { font-size: 12px; color: var(--mist); margin-top: 1rem; line-height: 1.7; }
+  .sources a { color: var(--wine); }
+
+  footer { background: var(--ink); color: rgba(247,243,238,0.4); padding: 2rem; text-align: center; font-size: 12px; line-height: 1.8; margin-top: 3.5rem; }
+  footer strong { color: var(--gold); }
+  footer a { color: rgba(247,243,238,0.6); text-decoration: none; }
+  footer a:hover { color: var(--gold); }
+
+  @media (max-width: 640px) {
+    nav { padding: 0 1rem; } .nav-links { gap: 1rem; } .nav-links a { font-size: 11px; }
+    .hero { padding: 3rem 1rem 2.5rem; } .article { padding: 2rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">Corkage DMV</a>
+  <ul class="nav-links">
+    <li><a href="index.html#directory">Directory</a></li>
+    <li><a href="index.html#how-it-works">How It Works</a></li>
+    <li><a href="guides.html">Guides</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-eyebrow">News &amp; Analysis</div>
+  <h1>Tock Is Folding Into Resy This Summer — <em>Here's What It Means for BYOB Diners</em></h1>
+  <p class="hero-sub">American Express is merging its two reservation platforms into one. For people who bring their own wine, the change quietly works in your favor.</p>
+</section>
+
+<article class="article">
+  <div class="byline">Published June 2026 · Corkage DMV</div>
+
+  <p class="lead">If you've ever booked a tasting menu or a winery dinner online, you've probably used Tock. Soon you won't — at least not by that name. American Express is folding Tock into Resy this summer, combining both reservation platforms under the Resy brand. The dining press is covering it as a reservation-wars story. But there's a smaller, more interesting angle that most coverage is skipping: what it means for diners who bring their own wine.</p>
+
+  <h2>What's Actually Happening</h2>
+  <p>In February 2026, American Express — which owns Resy — announced it would merge Resy with Tock, the reservation platform it acquired and best known for prepaid bookings, tasting menus, wineries, and fine dining. Over the course of the summer, the two are being combined into a single platform under Resy. The headline numbers:</p>
+  <ul>
+    <li>The merge roughly <strong>doubles Resy to more than 25,000 venues</strong>, bringing Tock's fine-dining restaurants and <strong>wineries</strong> onto Resy for the first time.</li>
+    <li>The <strong>Tock app and website will eventually shut down</strong>, with restaurants migrating into Resy instead.</li>
+    <li>Resy gains some of Tock's signature features along the way, including tiered experiences and prepaid bookings.</li>
+  </ul>
+  <p>For Amex, the goal is scale — a single platform large enough to take on OpenTable, which still lists far more restaurants worldwide. For diners, the practical upshot is that a whole category of serious, cellar-minded restaurants is about to live in one app.</p>
+
+  <h2>Why BYOB Diners Should Care</h2>
+  <p>Here's the connection the dining headlines miss. The restaurants that historically lived on Tock — chef-driven tasting destinations, special-occasion rooms, and especially <strong>wineries</strong> — skew heavily toward exactly the kind of place where a thoughtful corkage program lives. These are venues built around the wine experience, not around moving bottles off a markup-heavy list.</p>
+  <p>As those venues migrate onto Resy, two things happen for someone who likes to bring a special bottle:</p>
+  <ul>
+    <li><strong>Discovery gets easier.</strong> More cellar-friendly restaurants in one place means a better shot at finding a table that welcomes your wine.</li>
+    <li><strong>The Amex Resy credit reaches more of them.</strong> This is the big one — see below.</li>
+  </ul>
+
+  <div class="callout">
+    <div class="callout-label">The Credit Angle</div>
+    <p>The American Express Platinum Card's <strong>Resy dining credit returns up to $100 per quarter ($400 a year)</strong> at U.S. Resy restaurants. Until now, many fine-dining spots booked through Tock or OpenTable, so they didn't qualify. As Tock venues move onto Resy, <strong>they begin becoming credit-eligible this summer</strong>, with the majority expected to qualify by the end of 2027. Translation: the list of places where you can <strong>bring your own bottle and offset the meal with your Amex credit</strong> is about to grow considerably. We break the full strategy down in our <a href="amex-resy-byob.html">Amex Platinum Resy credit guide</a>.</p>
+  </div>
+
+  <h2>What It Means Here in the DMV</h2>
+  <p>Locally, the shift is already taking shape. <strong>Aventino Cucina</strong> in Bethesda ($40 corkage, two-bottle max) is on Resy today and lets you stack corkage savings with the Amex credit. As more area fine-dining rooms and nearby wineries migrate from Tock to Resy over the summer, expect that list to lengthen — and we'll keep the <a href="index.html#directory">directory</a> updated as it does.</p>
+
+  <h2>What to Do Right Now</h2>
+  <ul>
+    <li><strong>If you have an upcoming Tock reservation,</strong> hold onto your confirmation and watch for migration notices — your booking and any prepayment should carry over, but confirm with the restaurant.</li>
+    <li><strong>If you carry an Amex Platinum,</strong> make sure your Resy credit is enrolled, and start checking the Resy app for the credit-eligible badge (required at checkout as of August 1, 2026).</li>
+    <li><strong>Either way,</strong> keep doing the simple thing that saves the most: bring a bottle you love to a restaurant that welcomes it.</li>
+  </ul>
+
+  <div class="cta">
+    <h2>Find a BYOB Table on Resy</h2>
+    <p>Browse our directory of DMV restaurants that welcome your wine — with verified corkage policies and fees.</p>
+    <a class="cta-btn" href="index.html#directory">Browse the Directory</a>
+  </div>
+
+</article>
+
+<div class="meta-block">
+  <div class="disclaimer">
+    <strong>Please note:</strong> Corkage DMV is an independent directory and is not affiliated with, endorsed by, or sponsored by American Express, Resy, or Tock. Platform features, timelines, and credit-card terms change frequently — confirm current details with the Resy app and your American Express account. This article is informational and is not financial advice.
+  </div>
+  <div class="sources">
+    <strong>Sources &amp; further reading:</strong><br>
+    · <a href="https://frequentmiler.com/after-purchasing-tock-amex-to-fold-it-into-resy-in-summer-2026/" target="_blank" rel="noopener">Frequent Miler — Amex to fold Tock into Resy, Summer 2026</a><br>
+    · <a href="https://upgradedpoints.com/news/resy-merges-with-tock-adds-25k-venues/" target="_blank" rel="noopener">Upgraded Points — Resy merges with Tock, adds 25K+ venues</a><br>
+    · <a href="https://www.restaurantbusinessonline.com/technology/reservation-services-resy-tock-are-merging" target="_blank" rel="noopener">Restaurant Business — Resy and Tock are merging</a><br>
+    · <a href="https://www.fastcompany.com/91496951/amex-resy-tock-restaurant-reservation-wars" target="_blank" rel="noopener">Fast Company — Amex upgrading Resy to win the reservation wars</a><br>
+    <em>Last reviewed: June 2026.</em>
+  </div>
+</div>
+
+<footer>
+  <div><strong>Corkage DMV</strong> — Montgomery County, Maryland</div>
+  <div>Policies change. Always call ahead to confirm before bringing a bottle.</div>
+  <div style="margin-top:0.5rem"><a href="index.html">Home</a> · <a href="guides.html">Guides</a> · <a href="amex-resy-byob.html">Amex Resy Credit</a> · <a href="what-to-bring.html">What to Bring</a></div>
+</footer>
+
+</body>
+</html>
