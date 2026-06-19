@@ -99,6 +99,17 @@
 
   .nav-links a:hover { color: var(--gold); }
 
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--gold);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+  }
+
   /* ── HERO ── */
   .hero {
     background: var(--ink);
@@ -771,7 +782,20 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 640px) {
     nav { padding: 0 1rem; }
-    .nav-links { display: none; }
+    .nav-toggle { display: block; }
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 56px; left: 0; right: 0;
+      flex-direction: column;
+      gap: 0;
+      background: var(--ink);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { display: block; padding: 0.85rem 1.5rem; }
     .hero { padding: 3rem 1rem 2.5rem; }
     .hero-stats { gap: 2rem; }
     .controls { padding: 1rem; }
@@ -787,12 +811,13 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">Corkage DMV</a>
-  <ul class="nav-links">
+  <ul class="nav-links" onclick="this.classList.remove('open')">
     <li><a href="#directory">Directory</a></li>
     <li><a href="#how-it-works">How It Works</a></li>
     <li><a href="guides.html">Guides</a></li>
     <li><a href="#suggest">Suggest a Restaurant</a></li>
   </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
 </nav>
 
 <!-- HERO -->
@@ -839,8 +864,9 @@
 <main class="main">
   <div class="section-header">
     <h2 class="section-title">Restaurant Directory</h2>
-    <span class="section-sub">Montgomery County, MD · Updated June 2026</span>
+    <span class="section-sub">Montgomery County, MD &amp; Washington, DC · Updated June 2026</span>
   </div>
+  <p style="font-size:13px;color:var(--mist);margin:-0.75rem 0 1.25rem;">Neighborhood guide: <a href="bethesda.html" style="color:var(--wine);font-weight:500;text-decoration:none;">BYOB restaurants in Bethesda &rarr;</a></p>
   <div class="restaurant-grid" id="grid"></div>
 </main>
 

@@ -36,6 +36,7 @@
   .nav-links { display: flex; gap: 1.75rem; list-style: none; }
   .nav-links a { color: rgba(247,243,238,0.7); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover { color: var(--gold); }
+  .nav-toggle { display: none; background: none; border: none; color: var(--gold); font-size: 1.5rem; line-height: 1; cursor: pointer; padding: 0; }
 
   .hero { background: var(--ink); color: var(--paper); padding: 4.5rem 2rem 3.5rem; text-align: center; position: relative; overflow: hidden; }
   .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(107,30,60,0.4) 0%, transparent 70%); pointer-events: none; }
@@ -76,7 +77,11 @@
   footer a:hover { color: var(--gold); }
 
   @media (max-width: 640px) {
-    nav { padding: 0 1rem; } .nav-links { gap: 1rem; } .nav-links a { font-size: 11px; }
+    nav { padding: 0 1rem; }
+    .nav-toggle { display: block; }
+    .nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--ink); padding: 0.5rem 0; border-bottom: 1px solid rgba(201,168,76,0.3); box-shadow: 0 8px 16px rgba(0,0,0,0.25); }
+    .nav-links.open { display: flex; }
+    .nav-links a { display: block; padding: 0.85rem 1.5rem; font-size: 13px; }
     .hero { padding: 3rem 1rem 2.5rem; } .article { padding: 2rem 1.25rem; }
   }
 </style>
@@ -85,11 +90,12 @@
 
 <nav>
   <a class="nav-logo" href="index.html">Corkage DMV</a>
-  <ul class="nav-links">
+  <ul class="nav-links" onclick="this.classList.remove('open')">
     <li><a href="index.html#directory">Directory</a></li>
     <li><a href="index.html#how-it-works">How It Works</a></li>
     <li><a href="guides.html">Guides</a></li>
   </ul>
+  <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
 </nav>
 
 <section class="hero">
