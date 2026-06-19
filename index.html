@@ -3,7 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Corkage DMV — Bring Your Best Bottle</title>
+<title>BYOB &amp; Corkage Restaurants in Montgomery County &amp; the DMV | Corkage DMV</title>
+<meta name="description" content="A directory of restaurants in Montgomery County and the greater DMV that welcome your own wine — with verified corkage policies, fees, and the rules to know before you go.">
+<link rel="canonical" href="https://corkagedmv.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Corkage DMV">
+<meta property="og:title" content="BYOB &amp; Corkage Restaurants in the DMV">
+<meta property="og:description" content="Find restaurants that welcome your own wine across Montgomery County and the DMV, with verified corkage fees and policies.">
+<meta property="og:url" content="https://corkagedmv.com/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Corkage DMV","url":"https://corkagedmv.com/","description":"A directory of restaurants in Montgomery County and the greater DMV that welcome your own wine, with verified corkage policies and fees."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What is a corkage fee?","acceptedAnswer":{"@type":"Answer","text":"When a restaurant allows you to bring your own wine, it may charge a corkage fee to cover service — glassware, decanting, and staff attention to the bottle. Fees in Montgomery County typically range from $20 to $55 per bottle, with no legal cap."}},
+{"@type":"Question","name":"Can I bring a wine that is already on the restaurant's wine list?","acceptedAnswer":{"@type":"Answer","text":"No. Per Montgomery County regulations, the wine you bring cannot already appear on the restaurant's wine list. Always confirm before you arrive, and call ahead if in doubt."}},
+{"@type":"Question","name":"Do I have to order a meal to bring my own wine?","acceptedAnswer":{"@type":"Answer","text":"Yes. County regulations require that you order a meal to consume your personal wine. Corkage is a dining privilege, not a way to drink your own wine at the bar."}},
+{"@type":"Question","name":"Can I take leftover wine home?","acceptedAnswer":{"@type":"Answer","text":"Yes. If your bottle isn't finished, re-cork it and take it with you. The restaurant cannot legally retain an open bottle that belongs to a guest; many will re-cork it formally on request."}},
+{"@type":"Question","name":"How much should I tip when I bring my own wine?","acceptedAnswer":{"@type":"Answer","text":"Your server still opens, decants, and pours your wine, so it's gracious to tip as if you had ordered a mid-range bottle from their list. The corkage fee goes to the house; the tip goes to your server."}}
+]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -962,8 +982,39 @@ let activeFilters = { neighborhood: '', cuisine: '', verifiedOnly: false };
   document.getElementById('stat-total').textContent = RESTAURANTS.length;
   document.getElementById('stat-verified').textContent = RESTAURANTS.filter(r => r.corkage_status === 'yes').length;
 
+  injectStructuredData();
   render();
 })();
+
+// ── SEO: emit an ItemList of Restaurant schema from the data ──
+function injectStructuredData() {
+  const itemList = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "BYOB & Corkage Restaurants in the DMV",
+    "itemListElement": RESTAURANTS.map((r, i) => {
+      const item = {
+        "@type": "Restaurant",
+        "name": r.display_name,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": r.street,
+          "addressLocality": r.city,
+          "addressRegion": "MD",
+          "postalCode": r.zip,
+          "addressCountry": "US"
+        },
+        "servesCuisine": r.cuisine
+      };
+      if (r.lat && r.lon) item.geo = { "@type": "GeoCoordinates", "latitude": r.lat, "longitude": r.lon };
+      return { "@type": "ListItem", "position": i + 1, "item": item };
+    })
+  };
+  const s = document.createElement('script');
+  s.type = 'application/ld+json';
+  s.textContent = JSON.stringify(itemList);
+  document.head.appendChild(s);
+}
 
 function toggleFilter(type) {
   if (type === 'verified') {
