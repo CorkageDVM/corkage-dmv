@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What to Bring When You BYOB — Corkage DMV</title>
+<meta name="description" content="The essential gear for bringing your own wine to a restaurant — insulated totes, a reliable corkscrew, travel protection, and more. Curated by Corkage DMV.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #1a1410;
+    --paper: #f7f3ee;
+    --cream: #ede7dd;
+    --wine: #6b1e3c;
+    --wine-light: #8b2e50;
+    --gold: #c9a84c;
+    --sage: #5a6e52;
+    --mist: #9ca3af;
+    --border: #ddd5c8;
+    --card-bg: #ffffff;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--ink);
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: rgba(247,243,238,0.7);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 4.5rem 2rem 3.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(107,30,60,0.4) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    border: 1px solid rgba(201,168,76,0.4);
+    padding: 5px 14px;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+    font-weight: 600;
+    line-height: 1.1;
+    max-width: 760px;
+    margin: 0 auto 1.25rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero h1 em { font-style: italic; color: var(--gold); }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: rgba(247,243,238,0.65);
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  /* ── MAIN ── */
+  .main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+
+  .intro {
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #4a4038;
+    line-height: 1.8;
+  }
+
+  /* ── DISCLOSURE ── */
+  .disclosure {
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+    padding: 0.85rem 1.25rem;
+    background: var(--cream);
+    font-size: 12px;
+    color: #6a6258;
+    line-height: 1.6;
+  }
+
+  /* ── PRODUCT GRID ── */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s, transform 0.15s;
+  }
+
+  .product-card:hover {
+    box-shadow: 0 4px 20px rgba(26,20,16,0.1);
+    transform: translateY(-2px);
+  }
+
+  .product-icon {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1rem 0 1.25rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1rem;
+  }
+
+  .product-num {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+
+  .product-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 0.6rem;
+  }
+
+  .product-desc {
+    font-size: 13px;
+    color: #5a5048;
+    line-height: 1.65;
+    flex: 1;
+    margin-bottom: 1.25rem;
+  }
+
+  .product-btn {
+    display: block;
+    text-align: center;
+    padding: 11px;
+    background: var(--wine);
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    transition: background 0.2s;
+  }
+
+  .product-btn:hover { background: var(--wine-light); }
+
+  /* ── CLOSING CTA ── */
+  .cta {
+    text-align: center;
+    margin: 3.5rem auto 0;
+    max-width: 600px;
+  }
+
+  .cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .cta p { color: #5a5048; margin-bottom: 1.5rem; }
+
+  .cta-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    transition: background 0.2s;
+  }
+
+  .cta-btn:hover { background: #2a221a; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    color: rgba(247,243,238,0.4);
+    padding: 2rem;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-top: 3.5rem;
+  }
+
+  footer strong { color: var(--gold); }
+  footer a { color: rgba(247,243,238,0.6); text-decoration: none; }
+  footer a:hover { color: var(--gold); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    nav { padding: 0 1rem; }
+    .nav-links { gap: 1.25rem; }
+    .nav-links a { font-size: 11px; }
+    .hero { padding: 3rem 1rem 2.5rem; }
+    .main { padding: 2rem 1rem; }
+    .product-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">Corkage DMV</a>
+  <ul class="nav-links">
+    <li><a href="index.html#directory">Directory</a></li>
+    <li><a href="index.html#how-it-works">How It Works</a></li>
+    <li><a href="what-to-bring.html">What to Bring</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">The BYOB Kit</div>
+  <h1>What to Bring When You <em>BYOB</em></h1>
+  <p class="hero-sub">Carrying a special bottle to dinner deserves a little preparation. These are the few things that keep your wine safe in transit, served at its best, and finished gracefully.</p>
+</section>
+
+<!-- MAIN -->
+<main class="main">
+  <p class="intro">You've found a restaurant that welcomes your wine and chosen a bottle worth the occasion. A handful of small tools make the difference between simply transporting a bottle and arriving like you've done this before — and they make thoughtful gifts for the wine lover in your life.</p>
+
+  <div class="disclosure">
+    <strong>Disclosure:</strong> As an Amazon Associate, Corkage DMV earns from qualifying purchases. The links below are affiliate links — they cost you nothing extra, and they help us keep this directory free and up to date.
+  </div>
+
+  <div class="product-grid">
+
+    <div class="product-card">
+      <div class="product-icon">🍷</div>
+      <div class="product-num">Essential 01</div>
+      <div class="product-name">Two-Bottle Wine Tote</div>
+      <div class="product-desc">A padded, insulated carrier that protects two bottles from bumps on the way and holds their temperature — so a chilled white arrives still chilled and a delicate red isn't rattled. Bring one for the table and one to share.</div>
+      <a class="product-btn" href="https://amzn.to/4elrI6V" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-icon">🔑</div>
+      <div class="product-num">Essential 02</div>
+      <div class="product-name">Double-Hinged Waiter's Corkscrew</div>
+      <div class="product-desc">The sommelier's standard. A quality double-hinged wine key gives you leverage to pull a cork cleanly — invaluable for older corks that crumble, and a far better tool than whatever you'll find in a kitchen drawer. Slips in a pocket or bag.</div>
+      <a class="product-btn" href="https://amzn.to/4eQJTkW" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-icon">🛡️</div>
+      <div class="product-num">Essential 03</div>
+      <div class="product-name">Padded Travel Sleeves</div>
+      <div class="product-desc">Leak-proof, padded bottle sleeves are cheap insurance against a cracked bottle and a ruined bag — especially if you're bringing wine straight from a trip or carrying more than one. Reusable and they pack flat.</div>
+      <a class="product-btn" href="https://amzn.to/3SwW4dZ" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-icon">🧴</div>
+      <div class="product-num">Essential 04</div>
+      <div class="product-name">Vacuum Wine Stopper</div>
+      <div class="product-desc">Didn't finish the bottle? You're entitled to take it home. A vacuum stopper re-seals it properly so it survives the trip and the next day or two — much better than wedging the original cork back in.</div>
+      <a class="product-btn" href="https://amzn.to/4adF1Ul" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-icon">💨</div>
+      <div class="product-num">Essential 05</div>
+      <div class="product-name">Portable Aerator &amp; Pourer</div>
+      <div class="product-desc">A young, structured red often needs air to show its best. A compact aerator that fits in the bottle neck opens the wine up glass by glass — and doubles as a drip-free pourer at the table.</div>
+      <a class="product-btn" href="https://amzn.to/4oGfY2r" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-icon">🍾</div>
+      <div class="product-num">Essential 06</div>
+      <div class="product-name">Cork Pops Wine Opener</div>
+      <div class="product-desc">For effortless, foolproof opening, the Cork Pops uses a quick burst of pressure to lift the cork out cleanly — no twisting, no broken corks, no fuss. A fun, fast backup to keep in your kit, and a crowd-pleasing gift.</div>
+      <a class="product-btn" href="https://amzn.to/4gvzPz5" target="_blank" rel="nofollow sponsored noopener">View on Amazon</a>
+    </div>
+
+  </div>
+
+  <!-- CLOSING CTA -->
+  <div class="cta">
+    <h2>Now Find the Right Table</h2>
+    <p>You've got the kit. Browse restaurants across the DMV that welcome your bottle — with verified corkage policies and fees.</p>
+    <a class="cta-btn" href="index.html#directory">Browse the Directory</a>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div><strong>Corkage DMV</strong> — Montgomery County, Maryland</div>
+  <div>Policies change. Always call ahead to confirm before bringing a bottle.</div>
+  <div style="margin-top:0.5rem"><a href="index.html">Home</a> · <a href="index.html#how-it-works">How Corkage Works</a> · <a href="index.html#suggest">Suggest a Restaurant</a></div>
+</footer>
+
+</body>
+</html>
